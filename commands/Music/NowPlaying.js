@@ -66,7 +66,7 @@ module.exports = {
             });
         } else {
             embed.addFields({
-                name: `Current Duration: \`[0:00 / ${queue.songs[0].formattedDuration}]\``,
+                name: `Current Duration: \`[${queue.formattedCurrentTime} / ${queue.songs[0].formattedDuration}]\``,
                 value: `\`\`\`🔴 | 🎶──────────────────────────────\`\`\``,
                 inline: false,
             });
