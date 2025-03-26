@@ -5,15 +5,7 @@ I am using DisSpaceX and I really love it!
 but... it has some bugs so I forked to fix bugs.
 
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=DisSpaceX&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient"/> </a> 
-</p>
-
-<p align="center"> 
-  <a href="https://discord.gg/SNG3dh3MbR" target="_blank"> <img src="https://discordapp.com/api/guilds/903043706410643496/widget.png?style=banner2"/> </a> 
-</p>
-
-<p align="center"> 
-  <a href="https://ko-fi.com/nanotect" target="_blank"> <img src="https://ko-fi.com/img/githubbutton_sm.svg"/> </a> 
+<img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=d3bcff&text=DispaceX%20Customized&animation=twinkling&fontColor=black&fontSize=65&textBg=false&fontAlignY=45"/> </a> 
 </p>
 
 ## 📑 Feature
@@ -34,38 +26,50 @@ but... it has some bugs so I forked to fix bugs.
 -   [x] Spotify
 -   [x] Deezer
 -   [x] Apple Music
--   [x] Tidal
 -   [x] Direct Link .mp3 file
--   [x] And More 700+ Site Support
+-   [x] And More 700+ Site Support (ytdlp)
 
 ## 🚨 Have a Problem
 
-✈ Join Discord: [NanoSpace ♪♪](https://discord.gg/SNG3dh3MbR)
-mention me in chat #general or #javascript and ask problem okay! 👌
+Create new issue [here](https://github.com/ruka-64/DisSpaceX-Customized/issues)
 
 ## 🛑 Requirements
+
+### Windows
 
 Node.js **[Download](https://nodejs.org/dist/v17.0.1/node-v17.0.1-x64.msi)**
 
 FFmpeg **[Download!!](https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip)**
 
+### Linux (Debian/Ubuntu)
+
+Node.js (`sudo apt install nodejs`) or use [nvm](https://github.com/nvm-sh/nvm)
+
+FFmpeg (`sudo apt install ffmpeg`)
+
+## Linux (Arch Linux)
+
+Node.js (`sudo pacman -S nodejs-lts-iron`)
+
+FFmpeg (`sudo pacman -S ffmpeg`)
+
+### Common
+
 Discord Bot Token **[Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**
 
 ## 💌 Installation
 
-```
-git clone https://github.com/ruka-64/DisSpaceX
+```bash
+git clone https://github.com/ruka-64/DisSpaceX-Customized
 cd DisSpaceX
-npm install
+pnpm install #or npm i
 ```
-
-After installation finishes please drag **ffmpeg.exe** file into DisSpaceX folder and you can use `node .` to start the bot. or `Run Start.bat`
 
 ## 📚 Configuration
 
 Copy or Rename `.env.example` to `.env` and fill out the values:
 
-```.env
+```env
 TOKEN=REPLACE_HERE
 OWNER_ID=REPLACE_HERE
 EMBED_COLOR=#000001
