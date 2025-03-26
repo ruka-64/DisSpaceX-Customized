@@ -30,12 +30,12 @@ module.exports = {
         )
             return interaction.editReply("You need to be in a same/voice channel.");
 
-        const uni = `${queue.songs[0].playing ? "⏸️ |" : "🔴 |"}`;
+        const uni = `${queue.playing ? "⏸️ |" : "🔴 |"}`;
         const part = Math.floor((queue.currentTime / queue.songs[0].duration) * 30);
 
         const embed = new EmbedBuilder()
             .setAuthor({
-                name: queue.songs[0].playing ? "Song Pause..." : "Now Playing...",
+                name: queue.playing ? "Song Pause..." : "Now Playing...",
                 iconURL: "https://cdn.discordapp.com/emojis/741605543046807626.gif",
             })
             .setColor(client.color)
