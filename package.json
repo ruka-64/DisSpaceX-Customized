@@ -1,7 +1,7 @@
 {
-  "name": "disspacex",
+  "name": "disspacex-customized",
   "version": "6.3.1",
-  "description": "✈ Join Discord: https://discord.gg/SNG3dh3MbR",
+  "description": "DisSpaceX Customized version by ruka64",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
