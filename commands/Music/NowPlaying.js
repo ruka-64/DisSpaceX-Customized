@@ -44,7 +44,7 @@ module.exports = {
             .addFields({
                 name: "Uploader:",
                 value: `[${queue.songs[0].uploader.name || "Anonymous"}](${
-                    queue.songs[0].uploader.url || "https://www.github.com/Adivise"
+                    queue.songs[0].uploader.url || "https://www.github.com/ruka-64"
                 })`,
                 inline: true,
             })
