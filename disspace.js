@@ -7,7 +7,6 @@ const { YouTubePlugin } = require("@distube/youtube");
 const { DirectLinkPlugin } = require("@distube/direct-link");
 const { YtDlpPlugin } = require("@distube/yt-dlp");
 const { AppleMusicPlugin } = require("distube-apple-music");
-const { TidalPlugin } = require("distube-tidal");
 
 class MainClient extends Client {
     constructor() {
@@ -39,7 +38,6 @@ class MainClient extends Client {
             emitAddListWhenCreatingQueue: true,
             emitAddSongWhenCreatingQueue: true,
             plugins: [
-                new TidalPlugin(),
                 new AppleMusicPlugin(),
                 new YtDlpPlugin({ update: false }),
                 new DirectLinkPlugin(),

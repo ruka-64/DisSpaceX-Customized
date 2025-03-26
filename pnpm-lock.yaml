@@ -47,9 +47,6 @@ importers:
       distube-apple-music:
         specifier: ^0.1.0
         version: 0.1.0(distube@5.0.6(@discordjs/voice@0.18.0(opusscript@0.0.8))(discord.js@14.18.0))
-      distube-tidal:
-        specifier: ^0.1.0
-        version: 0.1.0(distube@5.0.6(@discordjs/voice@0.18.0(opusscript@0.0.8))(discord.js@14.18.0))
       dotenv:
         specifier: ^16.4.5
         version: 16.4.7
@@ -286,11 +283,6 @@ packages:
     peerDependencies:
       distube: '5'
 
-  distube-tidal@0.1.0:
-    resolution: {integrity: sha512-0+N/z/eI1+TcaIuI4NizoEsBxBsWOGFq5zkT6yj4YjGYjKtbcPx9Ir/VuKLs5VGPWylSlQIjSjQx2SC0Plop3w==}
-    peerDependencies:
-      distube: '5'
-
   distube@5.0.6:
     resolution: {integrity: sha512-eXcg76SQ+1BWcs/rXMFlU9mj8OAtPSKLrJvBzbWUFNasfr5rb5/T/SckKy8lnnDQzcADxafHEtBm+73EfQ4JDw==}
     engines: {node: '>=18.17'}
@@ -459,9 +451,6 @@ packages:
 
   isomorphic-unfetch@4.0.2:
     resolution: {integrity: sha512-1Yd+CF/7al18/N2BDbsLBcp6RO3tucSW+jcLq24dqdX5MNbCNTw1z4BsGsp4zNmjr/Izm2cs/cEqZPp4kvWSCA==}
-
-  itty-fetcher@0.9.4:
-    resolution: {integrity: sha512-o5YpTmov46EbzTrrVpeR9sRK3itWa32VsV9Fv04CzzDm1ZvAXG0RoOGjT9ECOwyipheNf4eLTkstfbRtG8Epgg==}
 
   libsodium-wrappers@0.7.15:
     resolution: {integrity: sha512-E4anqJQwcfiC6+Yrl01C1m8p99wEhLmJSs0VQqST66SbQXXBoaJY0pF4BNjRYa/sOQAxx6lXAaAFIlx+15tXJQ==}
@@ -662,9 +651,6 @@ packages:
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
-
-  tidal-music-api@1.2.1:
-    resolution: {integrity: sha512-7Gu0ncHWIX2VJQYgLw9oNywkMC0JmVTjDpTQJU3mgfrf9ZqhoQwajhYKYmwsVcDiJcMUZx7UQDIFM3LgEw0MHw==}
 
   tiny-typed-emitter@2.1.0:
     resolution: {integrity: sha512-qVtvMxeXbVej0cQWKqVSSAHmKZEHAvxdF8HEUBFWts8h+xEo5m/lEiPakuyZ3BnCBjOD8i24kzNOiOLLgsSxhA==}
@@ -997,11 +983,6 @@ snapshots:
       isomorphic-unfetch: 4.0.2
       node-html-parser: 6.1.13
 
-  distube-tidal@0.1.0(distube@5.0.6(@discordjs/voice@0.18.0(opusscript@0.0.8))(discord.js@14.18.0)):
-    dependencies:
-      distube: 5.0.6(@discordjs/voice@0.18.0(opusscript@0.0.8))(discord.js@14.18.0)
-      tidal-music-api: 1.2.1
-
   distube@5.0.6(@discordjs/voice@0.18.0(opusscript@0.0.8))(discord.js@14.18.0):
     dependencies:
       '@discordjs/voice': 0.18.0(opusscript@0.0.8)
@@ -1180,8 +1161,6 @@ snapshots:
     dependencies:
       node-fetch: 3.3.2
       unfetch: 5.0.0
-
-  itty-fetcher@0.9.4: {}
 
   libsodium-wrappers@0.7.15:
     dependencies:
@@ -1383,10 +1362,6 @@ snapshots:
   supports-color@7.2.0:
     dependencies:
       has-flag: 4.0.0
-
-  tidal-music-api@1.2.1:
-    dependencies:
-      itty-fetcher: 0.9.4
 
   tiny-typed-emitter@2.1.0: {}
 

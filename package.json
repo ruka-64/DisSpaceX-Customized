@@ -22,7 +22,6 @@
     "discord.js": "^14.16.3",
     "distube": "^5.0.4",
     "distube-apple-music": "^0.1.0",
-    "distube-tidal": "^0.1.0",
     "dotenv": "^16.4.5",
     "figlet": "^1.8.0",
     "libsodium-wrappers": "^0.7.15",
