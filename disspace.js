@@ -33,6 +33,9 @@ class MainClient extends Client {
 
         const client = this;
 
+        /**
+         * @type {DisTube}
+         */
         this.distube = new DisTube(client, {
             savePreviousSongs: true,
             emitAddListWhenCreatingQueue: true,
