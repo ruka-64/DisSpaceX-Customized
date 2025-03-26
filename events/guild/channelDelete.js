@@ -26,7 +26,7 @@ module.exports = async (client, channel) => {
     if (channel.type == 0) {
         const db = await GSetup.get(channel.guild.id);
         if (db.setup_ch == channel.id) {
-			const queue = client.distube.getQueue(channel.guild.id);
+            const queue = client.distube.getQueue(channel.guild.id);
             await client.createAlreadySetup(channel); // Can find on handlers/loadDatabase.js
             if (queue) {
                 client.distube.stop(channel);

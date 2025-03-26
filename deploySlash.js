@@ -19,8 +19,8 @@ const {
         args.get(0) == "guild"
             ? args.get(2) == "clear"
             : args.get(0) == "global"
-            ? args.get(1) == "clear"
-            : false;
+              ? args.get(1) == "clear"
+              : false;
     let deployed = args.get(0) == "guild" ? "guild" : args.get(0) == "global" ? "global" : null;
 
     if (!deployed) {
@@ -50,7 +50,7 @@ const {
             console.log(
                 `Interaction "${
                     cmd.type == "CHAT_INPUT" ? `/${cmd.name.join(" ")}` : `${cmd.name[0]}`
-                }" ${cmd.name[1] || ""} ${cmd.name[2] || ""} added to the transform list!`
+                }" ${cmd.name[1] || ""} ${cmd.name[2] || ""} added to the transform list!`,
             );
             store.push(cmd);
         });
@@ -170,7 +170,7 @@ const {
     const rest = new REST({ version: "9" }).setToken(TOKEN);
     const client = await rest.get(Routes.user());
     console.info(
-        `Account information received! ${client.username}#${client.discriminator} (${client.id})`
+        `Account information received! ${client.username}#${client.discriminator} (${client.id})`,
     );
 
     console.info(`Interactions are posted on discord!`);
@@ -190,7 +190,7 @@ const {
             await rest.put(Routes.applicationCommands(client.id), { body: command });
 
             console.info(
-                `Shared commands can take up to 1 hour to arrive. If you want it to come immediately, you can throw your bot from your server and get it back.`
+                `Shared commands can take up to 1 hour to arrive. If you want it to come immediately, you can throw your bot from your server and get it back.`,
             );
             break;
         }

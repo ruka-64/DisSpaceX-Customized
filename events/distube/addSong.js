@@ -15,7 +15,7 @@ module.exports = async (client, queue, song) => {
         .setDescription(
             `**Queued • [${song.name || "Anonymous"}](${
                 song.url || "https://www.github.com/ruka-64"
-            })** \`${song.formattedDuration}\` • ${song.user}`
+            })** \`${song.formattedDuration}\` • ${song.user}`,
         )
         .setColor("#000001");
 

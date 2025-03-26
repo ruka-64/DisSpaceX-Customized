@@ -8,20 +8,20 @@ module.exports = async (client, queue) => {
 
     if (db.voice_enable === true) {
         await client.UpdateMusic(queue);
-        
+
         const embed = new EmbedBuilder()
             .setDescription(`\`📛\` | **Song has been:** \`Ended\``)
-            .setColor('#000001')
+            .setColor("#000001");
 
-        queue.textChannel.send({ embeds: [embed] })
+        queue.textChannel.send({ embeds: [embed] });
     } else if (db.voice_enable === false) {
         await client.UpdateMusic(queue);
         await client.distube.voices.leave(queue.textChannel.guild);
-    
+
         const embed = new EmbedBuilder()
             .setDescription(`\`📛\` | **Song has been:** \`Ended\``)
-            .setColor('#000001')
-    
-        queue.textChannel.send({ embeds: [embed] })
+            .setColor("#000001");
+
+        queue.textChannel.send({ embeds: [embed] });
     }
-}
+};

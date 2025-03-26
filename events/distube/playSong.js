@@ -171,7 +171,7 @@ module.exports = async (client, queue, track) => {
                 const song = queue.songs[i];
                 songStrings.push(
                     `**${i}.** [${song.name}](${song.url}) \`[${song.formattedDuration}]\` • ${song.user}
-          `
+          `,
                 );
             }
 
@@ -190,7 +190,7 @@ module.exports = async (client, queue, track) => {
                             queue.songs[0].url
                         })** \`[${queue.songs[0].formattedDuration}]\` • ${
                             queue.songs[0].user
-                        }\n\n**Rest of queue**${str == "" ? "  Nothing" : "\n" + str}`
+                        }\n\n**Rest of queue**${str == "" ? "  Nothing" : "\n" + str}`,
                     )
                     .setFooter({
                         text: `Page • ${i + 1}/${pagesNum} | ${queue.songs.length} • Songs | ${
@@ -257,35 +257,35 @@ function disspace(nowQueue, nowTrack, client) {
                 .setCustomId("pause")
                 .setLabel(`Pause`)
                 .setEmoji("⏯")
-                .setStyle(ButtonStyle.Success)
+                .setStyle(ButtonStyle.Success),
         )
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("previous")
                 .setLabel(`Previous`)
                 .setEmoji("⬅")
-                .setStyle(ButtonStyle.Primary)
+                .setStyle(ButtonStyle.Primary),
         )
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("stop")
                 .setLabel(`Stop`)
                 .setEmoji("✖")
-                .setStyle(ButtonStyle.Danger)
+                .setStyle(ButtonStyle.Danger),
         )
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("skip")
                 .setLabel(`Skip`)
                 .setEmoji("➡")
-                .setStyle(ButtonStyle.Primary)
+                .setStyle(ButtonStyle.Primary),
         )
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("loop")
                 .setLabel(`Loop`)
                 .setEmoji("🔄")
-                .setStyle(ButtonStyle.Success)
+                .setStyle(ButtonStyle.Success),
         );
 
     const row2 = new ActionRowBuilder()
@@ -294,35 +294,35 @@ function disspace(nowQueue, nowTrack, client) {
                 .setCustomId("shuffle")
                 .setLabel(`Shuffle`)
                 .setEmoji(`🔀`)
-                .setStyle(ButtonStyle.Primary)
+                .setStyle(ButtonStyle.Primary),
         )
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("voldown")
                 .setLabel(`Vol -`)
                 .setEmoji(`🔉`)
-                .setStyle(ButtonStyle.Success)
+                .setStyle(ButtonStyle.Success),
         )
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("clear")
                 .setLabel(`Clear`)
                 .setEmoji(`🗑`)
-                .setStyle(ButtonStyle.Secondary)
+                .setStyle(ButtonStyle.Secondary),
         )
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("volup")
                 .setLabel(`Vol +`)
                 .setEmoji(`🔊`)
-                .setStyle(ButtonStyle.Success)
+                .setStyle(ButtonStyle.Success),
         )
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("queue")
                 .setLabel(`Queue`)
                 .setEmoji(`📋`)
-                .setStyle(ButtonStyle.Primary)
+                .setStyle(ButtonStyle.Primary),
         );
 
     return {

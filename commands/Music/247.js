@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require('discord.js');
+const { EmbedBuilder } = require("discord.js");
 const { Database } = require("st.db");
 
 const GVoice = new Database("./settings/models/voice.json", { databaseInObject: true });
@@ -9,9 +9,13 @@ module.exports = {
     category: "Music",
     run: async (client, interaction) => {
         await interaction.deferReply({ ephemeral: false });
-        
+
         const { channel } = interaction.member.voice;
-        if (!channel || interaction.member.voice.channel !== interaction.guild.members.me.voice.channel) return interaction.editReply("You need to be in a same/voice channel.")
+        if (
+            !channel ||
+            interaction.member.voice.channel !== interaction.guild.members.me.voice.channel
+        )
+            return interaction.editReply("You need to be in a same/voice channel.");
 
         const db = await GVoice.get(interaction.guild.id);
 
@@ -32,5 +36,5 @@ module.exports = {
 
             interaction.editReply({ embeds: [embed] });
         }
-    }
-}
+    },
+};

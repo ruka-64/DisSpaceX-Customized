@@ -20,7 +20,7 @@ module.exports = {
 
         for (let i = 0; i < all.length; i++) {
             const total = all[i].data;
-            index = (index + total)
+            index = index + total;
         }
 
         const TopUsable = [];
@@ -30,19 +30,24 @@ module.exports = {
 
             TopUsable.push(
                 `**${i + 1}.** ${name} | **Usable:** \`${usable}\`
-                `)
+                `,
+            );
         }
 
-        const str = TopUsable.join('');
+        const str = TopUsable.join("");
 
         const embed = new EmbedBuilder()
             .setColor(client.color)
-            .setAuthor({ name: `Usable Commands!`, iconURL: interaction.guild.iconURL({ dynamic: true })})
+            .setAuthor({
+                name: `Usable Commands!`,
+                iconURL: interaction.guild.iconURL({ dynamic: true }),
+            })
             .setThumbnail(client.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-            .setDescription(`${str == '' ? '  No Usable' : '\n' + str}`)
-            .setFooter({ text: `Total Command • ${BStats.all().length} | Total Usable • ${index}` })
+            .setDescription(`${str == "" ? "  No Usable" : "\n" + str}`)
+            .setFooter({
+                text: `Total Command • ${BStats.all().length} | Total Usable • ${index}`,
+            });
 
-
-        return interaction.editReply({ embeds: [embed] })
-    }
-}
+        return interaction.editReply({ embeds: [embed] });
+    },
+};

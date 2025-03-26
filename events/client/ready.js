@@ -1,7 +1,13 @@
-const { white, green } = require('chalk');
+const { white, green } = require("chalk");
 
 module.exports = async (client) => {
-    console.log(white('[') + green('INFO') + white('] ') + green(`${client.user.tag} (${client.user.id})`) + white(` is Ready!`));
+    console.log(
+        white("[") +
+            green("INFO") +
+            white("] ") +
+            green(`${client.user.tag} (${client.user.id})`) +
+            white(` is Ready!`),
+    );
 
     let guilds = client.guilds.cache.size;
     let users = client.users.cache.size;
@@ -14,9 +20,11 @@ module.exports = async (client) => {
     ];
 
     setInterval(() => {
-        client.user.setPresence({ 
-            activities: [{ name: `${activities[Math.floor(Math.random() * activities.length)]}`, type: 2 }], 
-            status: 'online', 
+        client.user.setPresence({
+            activities: [
+                { name: `${activities[Math.floor(Math.random() * activities.length)]}`, type: 2 },
+            ],
+            status: "online",
         });
-    }, 15000)
-}
+    }, 15000);
+};

@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require('discord.js');
+const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: ["utilities", "restart"],
@@ -6,7 +6,8 @@ module.exports = {
     category: "Utilities",
     run: async (client, interaction) => {
         await interaction.deferReply({ ephemeral: false });
-        if(interaction.user.id != client.owner) return interaction.channel.send("You not the client the owner!")
+        if (interaction.user.id != client.owner)
+            return interaction.channel.send("You not the client the owner!");
 
         const embed = new EmbedBuilder()
             .setDescription("**Account has been**: `Shutting down...`")
@@ -14,5 +15,5 @@ module.exports = {
 
         await interaction.editReply({ embeds: [embed] });
         process.exit();
-    }
+    },
 };

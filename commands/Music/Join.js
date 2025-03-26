@@ -7,17 +7,17 @@ module.exports = {
     run: async (client, interaction) => {
         await interaction.deferReply({ ephemeral: false });
 
-		const queue = client.distube.getQueue(interaction);
-		if (queue) return interaction.editReply(`I already playing in voice channel.`);
-		const { channel } = interaction.member.voice;
-		if(!channel) return interaction.editReply(`You need to be in voice channel.`);
+        const queue = client.distube.getQueue(interaction);
+        if (queue) return interaction.editReply(`I already playing in voice channel.`);
+        const { channel } = interaction.member.voice;
+        if (!channel) return interaction.editReply(`You need to be in voice channel.`);
 
-		await client.distube.voices.join(interaction.member.voice.channel);
+        await client.distube.voices.join(interaction.member.voice.channel);
 
-		const embed = new EmbedBuilder()
-			.setColor(client.color)
-			.setDescription(`\`🔊\` | **Joined:** \`${channel.name}\``)
+        const embed = new EmbedBuilder()
+            .setColor(client.color)
+            .setDescription(`\`🔊\` | **Joined:** \`${channel.name}\``);
 
-		interaction.editReply({ embeds: [embed] });
-    }
-}
+        interaction.editReply({ embeds: [embed] });
+    },
+};

@@ -12,8 +12,10 @@ module.exports = async (client, queue, playlist) => {
     const msg = await queue.textChannel.messages.cache.get(data.message_id);
 
     const embed = new EmbedBuilder()
-        .setDescription(`**Queued • [${playlist.name}](${playlist.url})** \`${queue.formattedDuration}\` (${playlist.songs.length} tracks) • ${playlist.user}`)
-        .setColor('#000001')
-  
-    await msg.edit({ content: " ", embeds: [embed] })
-}
+        .setDescription(
+            `**Queued • [${playlist.name}](${playlist.url})** \`${queue.formattedDuration}\` (${playlist.songs.length} tracks) • ${playlist.user}`,
+        )
+        .setColor("#000001");
+
+    await msg.edit({ content: " ", embeds: [embed] });
+};

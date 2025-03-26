@@ -1,4 +1,4 @@
-const { EmbedBuilder, ApplicationCommandOptionType } = require('discord.js');
+const { EmbedBuilder, ApplicationCommandOptionType } = require("discord.js");
 
 module.exports = {
     name: ["music", "move"],
@@ -16,7 +16,7 @@ module.exports = {
             description: "The position in queue want to move too.",
             type: ApplicationCommandOptionType.Integer,
             required: true,
-        }
+        },
     ],
     run: async (client, interaction) => {
         await interaction.deferReply({ ephemeral: false });
@@ -27,12 +27,18 @@ module.exports = {
         const queue = client.distube.getQueue(interaction);
         if (!queue) return interaction.editReply(`There is nothing in the queue right now!`);
         const { channel } = interaction.member.voice;
-        if (!channel || interaction.member.voice.channel !== interaction.guild.members.me.voice.channel) return interaction.editReply("You need to be in a same/voice channel.")
+        if (
+            !channel ||
+            interaction.member.voice.channel !== interaction.guild.members.me.voice.channel
+        )
+            return interaction.editReply("You need to be in a same/voice channel.");
 
         if (tracks == 0) return interaction.editReply(`Cannot move a song already playing.`);
-        if (position == 0) return interaction.editReply(`Cannot move to this position a song already playing.`);
+        if (position == 0)
+            return interaction.editReply(`Cannot move to this position a song already playing.`);
         if (tracks > queue.songs.length) return interaction.editReply(`Queue | Song not found.`);
-        if (position > queue.songs.length) return interaction.editReply(`Position | Song not found.`);
+        if (position > queue.songs.length)
+            return interaction.editReply(`Position | Song not found.`);
 
         const song = queue.songs[tracks];
 
@@ -41,8 +47,8 @@ module.exports = {
 
         const embed = new EmbedBuilder()
             .setDescription(`**Moved • [${song.name}](${song.url})** to ${position}`)
-            .setColor(client.color)
+            .setColor(client.color);
 
         interaction.editReply({ embeds: [embed] });
-    }
-}
+    },
+};

@@ -1,6 +1,6 @@
 const MainClient = require("./disspace.js");
 const client = new MainClient();
 
-client.connect()
+client.connect();
 
-module.exports = client; 
+module.exports = client;
