@@ -33,5 +33,10 @@
     "recursive-readdir": "^2.2.3",
     "st.db": "^5.1.4",
     "stuffs": "^0.1.42"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@distube/yt-dlp"
+    ]
   }
 }
