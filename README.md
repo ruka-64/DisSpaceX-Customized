@@ -47,7 +47,7 @@ Node.js (`sudo apt install nodejs`) or use [nvm](https://github.com/nvm-sh/nvm)
 
 FFmpeg (`sudo apt install ffmpeg`)
 
-## Linux (Arch Linux)
+### Linux (Arch Linux)
 
 Node.js (`sudo pacman -S nodejs-lts-iron`)
 
