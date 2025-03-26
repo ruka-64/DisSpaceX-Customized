@@ -1,3 +1,9 @@
+## This is fork of [this repository](https://github.com/Adivise/DisSpaceX)
+
+I am using DisSpaceX and I really love it!
+
+but... it has some bugs so I forked to fix bugs.
+
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=DisSpaceX&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient"/> </a> 
 </p>
